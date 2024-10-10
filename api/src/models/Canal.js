@@ -4,8 +4,8 @@ const { canais } = require("../mocks/dados.json");
 const gerarIdUnico = require("../utils/gerarIdUnico");
 
 class Canal extends Usuario {
-  constructor(nome, imagem, email, papel, inscricoes) {
-    super(nome, imagem, email, papel, inscricoes);
+  constructor(nome, imagem, email, papel) {
+    super(nome, imagem, email, papel);
     this.id = gerarIdUnico(canais);
     this.videos = [];
     this.inscritos = [];
