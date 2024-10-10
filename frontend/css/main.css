@@ -1,0 +1,84 @@
+main {
+  margin: 0 36px;
+}
+
+.filters__area {
+  display: flex;
+  gap: 8px;
+}
+
+.filters__area button {
+  background-color: #e6e6e6;
+  color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.filters__area button:hover {
+  background-color: #d9d9d9;
+}
+
+.videos__area {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+.video__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 320px;
+  width: 400px;
+}
+
+.video__thumbnail {
+  height: 224px;
+  width: 400px;
+  border-radius: 24px;
+}
+
+.video__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.channel__avatar {
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+.video__details {
+  width: 100%;
+}
+
+.video__details h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.video__details span {
+  font-size: 14px;
+}
+
+.video__details img {
+  height: 12px;
+}
+
+.video__details p {
+  font-size: 14px;
+}
+
+.options__button img {
+  height: 20px;
+}
