@@ -23,6 +23,14 @@
       "email": "mamaefalei@example.com",
       "papel": "usuarioInscrito",
       "inscricoes": []
+    },
+    {
+      "id": 9,
+      "nome": "Canal do Thor",
+      "imagem": "perfil.jpg",
+      "email": "vingadormaisforte@vingadores.com",
+      "papel": "usuarioInscrito",
+      "inscricoes": [1, 2, 3, 5]
     }
   ],
   "canais": [
@@ -70,15 +78,6 @@
       "papel": "usuarioDono",
       "videos": [5],
       "inscritos": [1, 3, 6]
-    },
-    {
-      "id": 6,
-      "nome": "Canal do Thor",
-      "imagem": null,
-      "email": "vingadormaisforte@vingadores.com",
-      "papel": "usuarioDono",
-      "videos": [7],
-      "inscritos": [1, 2, 3, 5, 6]
     }
   ],
   "videos": [
