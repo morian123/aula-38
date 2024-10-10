@@ -1,3 +1,4 @@
+const canaisRepository = require("../repositories/canaisRepository");
 const usuariosRepository = require("../repositories/usuariosRepository");
 
 class UsuariosService {
@@ -27,6 +28,13 @@ class UsuariosService {
 
   buscarPeloId(id) {
     return usuariosRepository.buscarPeloId(id);
+  }
+
+  buscarCanaisDoUsuario(listaDeIncricoes) {
+    const canais = listaDeIncricoes.map((canalId) =>
+      canaisRepository.buscarPeloId(canalId)
+    );
+    return canais;
   }
 
   adicionar(usuario) {

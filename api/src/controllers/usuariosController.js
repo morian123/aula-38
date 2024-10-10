@@ -38,6 +38,27 @@ class UsuariosController {
     }
   }
 
+  fetchChannels (req, res, next){
+    try {
+      const id = parseInt(req.params.id);
+
+      if (isNaN(id)) {
+        throw new Error("O ID não foi passado");
+      }
+
+      const usuario = usuariosService.buscarPeloId(id);
+
+      if (usuario) {
+        const canais = usuariosService.buscarCanaisDoUsuario(usuario.inscricoes);
+        res.status(200).json(canais);
+      } else {
+        errorNotFound(res, "Usuario não encontrado");
+      }
+    } catch (erro) {
+      next(erro);
+    }
+  }
+
   store(req, res, next) {
     try {
       const imagePath = req.file?.filename;

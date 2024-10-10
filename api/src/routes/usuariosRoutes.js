@@ -8,6 +8,8 @@ router.get("/", usuariosController.index);
 
 router.get("/:id", usuariosController.show);
 
+router.get("/:id/canais", usuariosController.fetchChannels);
+
 router.post("/", upload.single("image"), usuariosController.store);
 
 router.put("/:id", usuariosController.update);
