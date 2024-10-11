@@ -1,21 +1,18 @@
 import api from "./api.js";
+import rotaImagem from "../utils/rotaImagem.js";
 
-const rota = "http://localhost:3000/uploads/";
 
-async function renderizarTodos() {
+{async function renderizarTodos() {
   try {
     const videos = await api("videos");
-
     const videosArea = document.querySelector(".videos__area");
-
     for (const video of videos) {
       const canal = await api(`canais/${video.canalID}`);
-
       videosArea.innerHTML += `
         <div class="video__container">
           <img
             class="video__thumbnail"
-            src="${rota + video.imagem}"
+            src="${rotaImagem + video.imagem}"
             alt="Thumb do ${video.titulo}"
           />
           <div class="video__info">
@@ -47,5 +44,14 @@ async function renderizarTodos() {
     console.error(error);
   }
 }
+async function renderizarFotosDoUsuarios(usuario) {
+  try{
+      const fotoPerfilElemento = document.querySelector(".perfil__photo");
+      fotoPerfilElemento.src = rotaImagem + usuario.imagem;
+  } catch (error){
+      console.error(error)
+      alert("algo aconteceu ao renderizar foto do usuario")
+  }
+}}
 
-export default renderizarTodos;
+export default new interfaceUsuario ();
