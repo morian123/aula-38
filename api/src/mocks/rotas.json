@@ -9,6 +9,7 @@
   "usuariosRoutes": {
     "listarUsuarios": "/GET usuarios",
     "buscarUsuario": "GET /usuarios/:id",
+    "buscarCanaisDoUsuario": "GET /usuarios/:id/canais",
     "criarUsuarios": "POST /usuarios",
     "editarUsuarios": "PUT /usuarios/:id",
     "deletarUsuarios": "DELETE /usuarios/:id"
